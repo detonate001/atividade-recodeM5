@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="com.example.demo.ClienteRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.Cliente"/>
+    <fullyQualifiedTypeName name="com.example.demo.ResourceNotFoundException"/>
+</qualifiedTypeNameHistroy>
