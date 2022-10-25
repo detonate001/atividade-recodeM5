@@ -1,0 +1,34 @@
+package com.example.demo;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class Bilhete {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id_bilhete ;
+	
+	@Column(name="data_bilhete")
+	private String data_bilhete;
+	
+	@Column(name="promocao")
+	private String promocao;
+	
+	@Column(name="hora")
+	private String hora;
+	
+	public Bilhete() {
+		
+	}
+	
+	public Bilhete(String data_bilhete, String promocao, String hora) {
+		
+		
+	}
+
+
+
+
