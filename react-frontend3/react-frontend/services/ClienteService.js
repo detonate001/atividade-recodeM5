@@ -1,23 +1,23 @@
-// Cria a classe de servico FuncionarioService para realizar as chamadas HTTP REST via Axios
+// Cria a classe de servico ClienteService para realizar as chamadas HTTP REST via Axios
 import axios from 'axios';
 
-const FUNCIONARIO_API_BASE_URL = "http://localhost:8080/api/v1/funcionarios";
+const CLIENTE_API_BASE_URL = "http://localhost:8080/api/v1/clientes";
 
-class FuncionarioService {
- getFuncionarios(){
- return axios.get(FUNCIONARIO_API_BASE_URL);
+class ClienteService {
+ getClientes(){
+ return axios.get(CLIENTE_API_BASE_URL);
  }
- createFuncionario(funcionario){
- return axios.post(FUNCIONARIO_API_BASE_URL, funcionario);
+ createCliente(cliente){
+ return axios.post(CLIENTE_API_BASE_URL, cliente);
  }
- getFuncionarioById(funcionarioId){
- return axios.get(FUNCIONARIO_API_BASE_URL + '/' + funcionarioId);
+ getClienteById(clienteId_cliente){
+ return axios.get(CLIENTE_API_BASE_URL + '/' + clienteId_cliente);
  }
- updateFuncionario(funcionario, funcionarioId){
- return axios.put(FUNCIONARIO_API_BASE_URL + '/' + funcionarioId, funcionario);
+ updateCliente(cliente, clienteId_cliente){
+ return axios.put(CLIENTE_API_BASE_URL + '/' + clienteId_cliente, cliente);
  }
- deleteFuncionario(funcionarioId){
- return axios.delete(FUNCIONARIO_API_BASE_URL + '/' + funcionarioId);
+ deleteCliente(clienteId_cliente){
+ return axios.delete(CLIENTE_API_BASE_URL + '/' + clienteId_cliente);
  }
 }
-export default new FuncionarioService()
+export default new ClienteService()

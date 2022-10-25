@@ -1,6 +1,6 @@
 // Codigo para visualizar os Clientes
 import React, { Component } from 'react'
-import ClienteService from '../services/ClienteService'
+import ClienteService from '../../services/ClienteService'
 
 class ViewClienteComponent extends Component {
      constructor(props) {

@@ -16,7 +16,7 @@ class HeaderComponent extends Component {
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                     <div><a href="https://recode.org.br" className="navbar-brand">App - Gerenciameno de 
-                    Funcionarios</a></div>
+                    Clientes</a></div>
                 </nav>
                 </header>
             </div>

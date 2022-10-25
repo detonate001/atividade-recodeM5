@@ -1,6 +1,6 @@
 // Criar a pagina para adicionar e alterar um Cliente
 import React, { Component } from 'react'
-import ClienteService from '../services/ClienteService';
+import ClienteService from '../../services/ClienteService';
 
 class CreateClienteComponent extends Component {
     constructor(props) {
@@ -129,7 +129,7 @@ componentDidMount() {
  )
  }
 }
-export default CreateFuncionarioComponent
+export default CreateClienteComponent
 
 
                

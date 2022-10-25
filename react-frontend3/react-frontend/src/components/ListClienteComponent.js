@@ -1,6 +1,6 @@
 // Componente para listar os Clientes 
 import React, { Component } from 'react'
-import ClienteService from '../services/ClienteService'
+import ClienteService from '../../services/ClienteService'
 
 class ListClienteComponent extends Component {
     constructor(props) {
