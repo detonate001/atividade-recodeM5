@@ -54,20 +54,86 @@ componentDidMount() {
                     }
                 }
 
-                changePrimeiroNomeHandler= (event) => {
-                    this.setState({primeiroNome: event.target.value});
+                changeEmailHandler= (event) => {
+                    this.setState({email: event.target.value});
                     }
-                    changeUltimoNomeHandler= (event) => {
-                    this.setState({ultimoNome: event.target.value});
+                    changeCpfHandler= (event) => {
+                    this.setState({cpf: event.target.value});
                     }
-                    changeEmailHandler= (event) => {
-                    this.setState({emailId: event.target.value});
+                    changeSenhaHandler= (event) => {
+                    this.setState({senha: event.target.value});
+                    changeData_nascimentoHandler= (event) => {
+                    this.setState({data_nascimento: event.target.value});
                     }
-                    changeEmailHandler= (event) => {
-                    this.setState({emailId: event.target.value});
                  }
                    
+                 cancel(){
+                    this.props.history.push('/clientes');
+                 }
+
+                 getTitle(){
+                    if(this.state.id === '_add'){
+                    return <h3 className="text-center">Inserir Cliente</h3>
+                    }else{
+                    return <h3 className="text-center">Alterar Dados Cliente</h3>
+                    }
+                    }
+                    render() {
+                        return (
+                        <div>
+                             <br></br>
+                                <div className = "container">
+                                    <div className = "row">
+                                        <div className = "card col-md-6 offset-md-3 offset-md-3">
+                        {
+                        this.getTitle()
+                        }
+                       <div className = "card-body">
+                            <form>
+                            
+                                 <div className = "form-group">
+                                        <label> Email: </label>
+                        <input placeholder="Email" name="email" className="form-control"
+                        value={this.state.email} 
+                        onChange={this.changeEmailHandler}/>
+                            </div>
+            <div className = "form-group">
+                     <label> Cpf: </label>
+                            <input placeholder="Cpf" name="cpf" className="form-control"
+                         value={this.state.cpf} onChange={this.changeCpfHandler}/>
+            </div>
+                <div className = "form-group">
+                    <label> Senha: </label>
+            <input placeholder="Senha" name="senha" className="form-control"
+                    value={this.state.senha} onChange={this.changeSenhaHandler}/>
+            </div>
+            
+            
+                <div className = "form-group">
+                    <label> Data de nascimento: </label>
+            <input placeholder="Data_nascimento" name="data_nascimento" className="form-control"
+                    value={this.state.data_nascimento} onChange={this.changeData_nascimentoHandler}/>
+            </div>
+
+            <button className="btn btn-success"
+                onClick={this.saveOrUpdateCliente}>Salvar</button>
+                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} 
+            style={{marginLeft: "10px"}}>Cancelar</button>
+                       
+                       </form>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ )
+ }
+}
+export default CreateFuncionarioComponent
+
+
                
+                
 
 
 
